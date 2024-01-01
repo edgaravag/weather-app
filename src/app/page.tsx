@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     const fetchWeather = async () => {
       try {
-        const url = `http://api.openweathermap.org/data/2.5/forecast?q=${city === null || undefined ? "yerevan" : city}&units=${units}&appid=${process.env.NEXT_PUBLIC_MY_API_KEY}`;
+        const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city === null || undefined ? "yerevan" : city}&units=${units}&appid=${process.env.NEXT_PUBLIC_MY_API_KEY}`;
         const res = await axios.get(url);
         setWeather(res.data);
       } catch (error) {
