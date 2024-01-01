@@ -10,13 +10,12 @@ export default function Home() {
   const [city, setCity] = useState<string>("yerevan");
   const [weather, setWeather] = useState<any>("");
   const [biggestCitiesList, setBiggestCitiesList] = useState<string[]>(biggestCities);
-  const [units, setUnits] = useState('metric')
-  
-  const url = `http://api.openweathermap.org/data/2.5/forecast?q=${city === null || undefined ? "yerevan" : city}&units=${units}&appid=772181a5766b88756653593c35b9f562`;
+  const [units, setUnits] = useState<string>('metric')
 
   useEffect(() => {
     const fetchWeather = async () => {
       try {
+        const url = `http://api.openweathermap.org/data/2.5/forecast?q=${city === null || undefined ? "yerevan" : city}&units=${units}&appid=${process.env.NEXT_PUBLIC_MY_API_KEY}`;
         const res = await axios.get(url);
         setWeather(res.data);
       } catch (error) {

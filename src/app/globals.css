@@ -16,6 +16,7 @@
 
 body{
   background-color: rgb(242,251,255);
+  min-width: 375px;
 }
 
 /* Chrome, Edge, and Safari */

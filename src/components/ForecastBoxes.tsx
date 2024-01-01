@@ -9,7 +9,7 @@ const ForecastBoxes = (data: IApiData) => {
   const boxesData = Array.isArray(apiData.list) ? apiData.list : [];
 
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const [showMore, setShowMore] = useState(10)
+  const [showMore, setShowMore] = useState<number>(10)
   const handleBoxClick = (index: number) => setActiveIndex(index);
 
   return (
