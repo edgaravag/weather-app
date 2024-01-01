@@ -54,7 +54,7 @@ const ForecastBoxes = (data: IApiData) => {
             );
         })}
       </div>
-      <div className="flex mx-auto gap-6">
+      <div className="flex w-full justify-center mx-auto gap-6">
         <button 
           className=" w-48 flex justify-center items-center mt-12 border-4 border-[#aecadf] rounded-xl"
           onClick={() => setShowMore(showMore + 4)}

@@ -13,7 +13,7 @@ const Header = ({ setBiggestCitiesList, setCity, setUnits, units }: IProps) => {
           <Image src={Logo} alt="" style={{ width: "52px", height: "auto" }} priority />
           <h2 className="text-xl font-black">WeatherAM</h2>
         </div>
-        <div className="relative flex items-center gap-5 ml-5 md:ml-0">
+        <div className="relative flex items-center gap-5 mx-5 md:ml-0">
           <Image
             src={SearchIcon}
             alt=""
@@ -28,7 +28,7 @@ const Header = ({ setBiggestCitiesList, setCity, setUnits, units }: IProps) => {
             />
           </div>
         </div>
-        <div className="flex ml-5 md:ml-0">
+        <div className="flex md:ml-0">
           <p className="text-xl font-bold">
             <span className={`cursor-pointer ${units === "metric" ? "text-[#38ccdc]" : ""}`} onClick={() => setUnits("metric")}>
               °C
